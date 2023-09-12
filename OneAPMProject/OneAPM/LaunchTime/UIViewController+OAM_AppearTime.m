@@ -47,6 +47,7 @@ static BOOL _oam_firstPageShow;
     
     // 调用原始的viewDidAppear方法
     [self oam_viewDidAppear:animated];
+    _oam_firstPageShow = YES;
 }
 
 @end
