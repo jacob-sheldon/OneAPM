@@ -29,6 +29,8 @@
 		50C629E62AAFFC730090B780 /* UIViewController+OAM_AppearTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C629E42AAFFC730090B780 /* UIViewController+OAM_AppearTime.h */; };
 		50C629E72AAFFC730090B780 /* UIViewController+OAM_AppearTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C629E52AAFFC730090B780 /* UIViewController+OAM_AppearTime.m */; };
 		50C629EA2AAFFDCA0090B780 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C629E92AAFFDCA0090B780 /* UIViewController+Test.m */; };
+		50C62A1A2AB0A0880090B780 /* StutterMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C62A182AB0A0880090B780 /* StutterMonitor.h */; };
+		50C62A1B2AB0A0880090B780 /* StutterMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C62A192AB0A0880090B780 /* StutterMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		50C629E82AAFFDCA0090B780 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
 		50C629E92AAFFDCA0090B780 /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		50C629EB2AAFFE9D0090B780 /* HookAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookAppDelegate.h; sourceTree = "<group>"; };
+		50C62A182AB0A0880090B780 /* StutterMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StutterMonitor.h; sourceTree = "<group>"; };
+		50C62A192AB0A0880090B780 /* StutterMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StutterMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 		5074FAA62AAC05D20042FF26 /* OneAPM */ = {
 			isa = PBXGroup;
 			children = (
+				50C62A152AB09C920090B780 /* Stutter */,
 				5074FABE2AAC08300042FF26 /* fishhook */,
 				5074FAB12AAC05EC0042FF26 /* LaunchTime */,
 				5074FAA72AAC05D20042FF26 /* OneAPM.h */,
@@ -183,6 +188,15 @@
 			path = fishhook;
 			sourceTree = "<group>";
 		};
+		50C62A152AB09C920090B780 /* Stutter */ = {
+			isa = PBXGroup;
+			children = (
+				50C62A182AB0A0880090B780 /* StutterMonitor.h */,
+				50C62A192AB0A0880090B780 /* StutterMonitor.m */,
+			);
+			path = Stutter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -192,6 +206,7 @@
 			files = (
 				5074FAC22AAC084D0042FF26 /* oam_fishhook.h in Headers */,
 				50C629E62AAFFC730090B780 /* UIViewController+OAM_AppearTime.h in Headers */,
+				50C62A1A2AB0A0880090B780 /* StutterMonitor.h in Headers */,
 				5074FABC2AAC06DF0042FF26 /* OneAPMSDK.h in Headers */,
 				5074FAA82AAC05D20042FF26 /* OneAPM.h in Headers */,
 			);
@@ -251,6 +266,7 @@
 					};
 					5074FAA42AAC05D20042FF26 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -317,6 +333,7 @@
 				50C629E72AAFFC730090B780 /* UIViewController+OAM_AppearTime.m in Sources */,
 				5074FAC12AAC084D0042FF26 /* oam_fishhook.c in Sources */,
 				50691FF32AAD8AA400F6C507 /* HookAppDelegate.m in Sources */,
+				50C62A1B2AB0A0880090B780 /* StutterMonitor.m in Sources */,
 				5074FABD2AAC06DF0042FF26 /* OneAPMSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +537,7 @@
 		5074FAAE2AAC05D30042FF26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -543,6 +561,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -552,6 +572,7 @@
 		5074FAAF2AAC05D30042FF26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -575,6 +596,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

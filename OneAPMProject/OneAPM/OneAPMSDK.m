@@ -6,11 +6,12 @@
 //
 
 #import "OneAPMSDK.h"
+#import "StutterMonitor.h"
 
 @implementation OneAPMSDK
 
 + (void)start {
-    
+    [StutterMonitor start];
 }
 
 @end
