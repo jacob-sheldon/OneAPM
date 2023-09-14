@@ -6,6 +6,7 @@
 //
 
 #import "StutterMonitor.h"
+#import "OAMBacktrace.h"
 
 @implementation StutterMonitor
 
@@ -38,6 +39,8 @@
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
             
             if (stuttered) {
+                NSString *trace = [OAMBacktrace oam_backtraceAllThreads];
+                NSLog(@"%@", trace);
                 NSLog(@"卡顿了，卡顿时长：%f", [[NSDate date] timeIntervalSinceDate:beginDate]);
             } else {
                 NSLog(@"没有卡顿");

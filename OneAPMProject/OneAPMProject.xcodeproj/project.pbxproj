@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505B7F162AB2BCE900D2A2EB /* OAMMachOCrashInspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 505B7F142AB2BCE900D2A2EB /* OAMMachOCrashInspect.h */; };
+		505B7F172AB2BCE900D2A2EB /* OAMMachOCrashInspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B7F152AB2BCE900D2A2EB /* OAMMachOCrashInspect.m */; };
 		50691FE82AAD829600F6C507 /* XYZPerson+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 50691FE72AAD829600F6C507 /* XYZPerson+Load.m */; };
 		50691FEB2AAD82D800F6C507 /* XYZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 50691FEA2AAD82D800F6C507 /* XYZPerson.m */; };
 		50691FF32AAD8AA400F6C507 /* HookAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50691FF22AAD8AA400F6C507 /* HookAppDelegate.m */; };
@@ -31,6 +33,8 @@
 		50C629EA2AAFFDCA0090B780 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C629E92AAFFDCA0090B780 /* UIViewController+Test.m */; };
 		50C62A1A2AB0A0880090B780 /* StutterMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C62A182AB0A0880090B780 /* StutterMonitor.h */; };
 		50C62A1B2AB0A0880090B780 /* StutterMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C62A192AB0A0880090B780 /* StutterMonitor.m */; };
+		50C62A1E2AB0AA140090B780 /* OAMBacktrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C62A1C2AB0AA140090B780 /* OAMBacktrace.h */; };
+		50C62A1F2AB0AA140090B780 /* OAMBacktrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C62A1D2AB0AA140090B780 /* OAMBacktrace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		505B7F142AB2BCE900D2A2EB /* OAMMachOCrashInspect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAMMachOCrashInspect.h; sourceTree = "<group>"; };
+		505B7F152AB2BCE900D2A2EB /* OAMMachOCrashInspect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAMMachOCrashInspect.m; sourceTree = "<group>"; };
 		50691FE62AAD829600F6C507 /* XYZPerson+Load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XYZPerson+Load.h"; sourceTree = "<group>"; };
 		50691FE72AAD829600F6C507 /* XYZPerson+Load.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XYZPerson+Load.m"; sourceTree = "<group>"; };
 		50691FE92AAD82D800F6C507 /* XYZPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZPerson.h; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 		50C629EB2AAFFE9D0090B780 /* HookAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookAppDelegate.h; sourceTree = "<group>"; };
 		50C62A182AB0A0880090B780 /* StutterMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StutterMonitor.h; sourceTree = "<group>"; };
 		50C62A192AB0A0880090B780 /* StutterMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StutterMonitor.m; sourceTree = "<group>"; };
+		50C62A1C2AB0AA140090B780 /* OAMBacktrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAMBacktrace.h; sourceTree = "<group>"; };
+		50C62A1D2AB0AA140090B780 /* OAMBacktrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAMBacktrace.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		505B7F132AB2BCC600D2A2EB /* crash */ = {
+			isa = PBXGroup;
+			children = (
+				505B7F142AB2BCE900D2A2EB /* OAMMachOCrashInspect.h */,
+				505B7F152AB2BCE900D2A2EB /* OAMMachOCrashInspect.m */,
+			);
+			path = crash;
+			sourceTree = "<group>";
+		};
 		5074FA7B2AAC05BE0042FF26 = {
 			isa = PBXGroup;
 			children = (
@@ -156,12 +173,15 @@
 		5074FAA62AAC05D20042FF26 /* OneAPM */ = {
 			isa = PBXGroup;
 			children = (
+				505B7F132AB2BCC600D2A2EB /* crash */,
 				50C62A152AB09C920090B780 /* Stutter */,
 				5074FABE2AAC08300042FF26 /* fishhook */,
 				5074FAB12AAC05EC0042FF26 /* LaunchTime */,
 				5074FAA72AAC05D20042FF26 /* OneAPM.h */,
 				5074FABA2AAC06DF0042FF26 /* OneAPMSDK.h */,
 				5074FABB2AAC06DF0042FF26 /* OneAPMSDK.m */,
+				50C62A1C2AB0AA140090B780 /* OAMBacktrace.h */,
+				50C62A1D2AB0AA140090B780 /* OAMBacktrace.m */,
 			);
 			path = OneAPM;
 			sourceTree = "<group>";
@@ -205,9 +225,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5074FAC22AAC084D0042FF26 /* oam_fishhook.h in Headers */,
+				50C62A1E2AB0AA140090B780 /* OAMBacktrace.h in Headers */,
 				50C629E62AAFFC730090B780 /* UIViewController+OAM_AppearTime.h in Headers */,
 				50C62A1A2AB0A0880090B780 /* StutterMonitor.h in Headers */,
 				5074FABC2AAC06DF0042FF26 /* OneAPMSDK.h in Headers */,
+				505B7F162AB2BCE900D2A2EB /* OAMMachOCrashInspect.h in Headers */,
 				5074FAA82AAC05D20042FF26 /* OneAPM.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +356,8 @@
 				5074FAC12AAC084D0042FF26 /* oam_fishhook.c in Sources */,
 				50691FF32AAD8AA400F6C507 /* HookAppDelegate.m in Sources */,
 				50C62A1B2AB0A0880090B780 /* StutterMonitor.m in Sources */,
+				50C62A1F2AB0AA140090B780 /* OAMBacktrace.m in Sources */,
+				505B7F172AB2BCE900D2A2EB /* OAMMachOCrashInspect.m in Sources */,
 				5074FABD2AAC06DF0042FF26 /* OneAPMSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
